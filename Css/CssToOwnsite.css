@@ -1,0 +1,479 @@
+/* Сбрасываем отступы и паддинги */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Intel One Mono", monospace;
+  color: #D0D8FF;
+  scroll-behavior: smooth;
+  position: relative;
+  min-height: 100vh;
+  background: none; 
+  overflow-x: hidden;
+}
+
+
+#background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(
+    270deg,
+    #002c26,
+    #101010,
+    hsl(304, 100%, 3%),
+    #000319,
+    #070a00,
+    #140000,
+    rgb(16, 0, 16)
+  );
+  background-size: 1200% 1200%;
+  animation: gradientShift 20s ease infinite;
+  filter: blur(2px);
+}
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Контент поверх фона */
+#page-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* Верхняя шапка */
+#UpSide {
+  width: 100%;
+  height: 110px;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: relative;
+  opacity: 0.9;
+  border-bottom: 2px solid rgb(122, 122, 122);
+}
+
+#logotip {
+  width: 138px;
+  height: auto;
+  position: relative;
+  left: 181px;
+  top: -13px;
+}
+
+#H1anH2up {
+  text-align: center;
+  margin-left: -262px;
+}
+
+.Zagolovok1 {
+  position: relative;
+  top: 50px;
+  text-align: center;
+  margin-left: -95px;
+  margin-top: 40px;
+  margin-bottom: 27px;
+  font-size: 70px;
+  color: #D0D8FF;
+}
+
+.Zagolovok2 {
+  position: relative;
+  top: 20px;
+  text-align: center;
+  left: -254px;
+  margin-bottom: 325px;
+  font-size: 30px;
+  color: #818181;
+}
+
+/* Кнопки в шапке */
+.btn {
+  transition-property: background-color;
+  transition-duration: 0.6s;
+  font-family: "Intel One Mono", monospace;
+  position: relative;
+  width: 140px;
+  bottom: -22px;
+  display: block;
+  float: right;
+  background-color: transparent;
+  color: #cccccc;
+  border-radius: 15px;
+  border: none;
+  padding: 8px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  left: -125px;
+  margin-right: 25px;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.btn:hover {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.85), 0 0 30px rgba(20, 20, 20, 0.7);
+  transform: scale(1.05) translateZ(10px);
+  transition-duration: 0.6s;
+  z-index: 10;
+  transition: box-shadow 0.4s ease, transform 0.6s ease;
+  background-color: rgb(112, 111, 111);
+}
+
+/* Сетка с фотографиями */
+#CenterPhots {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 44px;
+  max-width: 1085px;
+  margin: 0 auto;
+  padding: 40px;
+  margin-bottom: 595px;
+}
+
+.photo-block {
+  position: relative;
+  width: 100%;
+}
+
+.photo-block:hover #Te1,
+.photo-block:hover #Te2,
+.photo-block:hover #Te3,
+.photo-block:hover #Te4,
+.photo-block:hover #Te5,
+.photo-block:hover #Te6,
+.photo-block:hover #Te7 {
+  opacity: 0.6;
+  transform: scale(1.05) translateZ(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 11;
+}
+
+/* Фотографии */
+.Phots {
+  transition: box-shadow 0.7s ease;
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-block:hover #dr1 {
+  transform: scale(1.05) translateY(-8px);
+}
+
+
+
+/* Текст на фотографиях */
+.photo-text1,
+.photo-text2,
+.photo-text3,
+.photo-text4,
+.photo-text5,
+.photo-text6,
+.photo-text7 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.photo-text1 {
+  transition-duration: 0.33s;
+  background-color: #a0a0a0;
+  border-radius: 0px;
+  text-decoration: none;
+  z-index: 10;
+  color: #545454;
+}
+
+.photo-text2 {
+  color: #fffacd;
+}
+
+.photo-text3 {
+  color: #e8e8e8;
+}
+
+.photo-text4 {
+  color: #f2cbde;
+}
+
+.photo-text5 {
+  color: #998e8e;
+}
+
+.photo-text6 {
+  color: #f0e3c5;
+}
+
+.photo-text7 {
+  color: #ffaa00;
+}
+
+
+#Te1,
+#Te2,
+#Te3,
+#Te4,
+#Te5,
+#Te6,
+#Te7 {
+  transition: transform 0.3s ease;
+}
+
+#ph1,
+#ph2,
+#ph3,
+#ph4,
+#ph5,
+#ph6,
+#ph7 {
+  transition: box-shadow 0.7s ease, transform 0.3s ease;
+}
+
+#ph1:hover ~ .photo-text1 {
+  transform: scale(1.05) translateY(20px);
+  transition-duration: 0.5s;
+}
+
+#ph1 {
+  position: absolute;
+  box-shadow: 0 8px 20px rgba(180, 210, 230, 0.25), 0 0 15px rgba(200, 220, 255, 0.15);
+}
+
+#ph2 {
+  box-shadow: 0 6px 20px rgba(0, 100, 50, 0.25), 0 0 15px rgba(0, 150, 80, 0.15);
+}
+
+#ph3 {
+  box-shadow: 0 10px 40px rgba(10, 30, 100, 0.4), 0 0 30px rgba(70, 130, 180, 0.35);
+}
+
+#ph4 {
+  box-shadow: 0 10px 40px rgba(100, 10, 10, 0.55), 0 0 30px rgba(180, 60, 60, 0.5);
+}
+
+#ph5 {
+  box-shadow: 0 8px 30px rgba(120, 80, 150, 0.4), 0 0 25px rgba(180, 150, 220, 0.3);
+}
+
+#ph6 {
+  box-shadow: 0 8px 30px rgba(60, 180, 180, 0.4), 0 0 25px rgba(100, 200, 150, 0.3);
+}
+
+#ph7 {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(20, 20, 20, 0.3);
+}
+
+#ph1:hover {
+  box-shadow: 0 8px 20px rgba(180, 210, 230, 0.6), 0 0 15px rgba(200, 220, 255, 0.4);
+  transform: scale(1.05) translateZ(10px);
+  transition-duration: 0.5s;
+  z-index: 10;
+}
+
+#ph2:hover {
+  box-shadow: 0 6px 20px rgba(0, 100, 50, 0.7), 0 0 15px rgba(0, 150, 80, 0.5);
+  transform: scale(1.05) translateZ(10px);
+  transition-duration: 0.5s;
+  z-index: 10;
+}
+
+#ph3:hover {
+  box-shadow: 0 10px 40px rgba(10, 30, 100, 0.85), 0 0 30px rgba(70, 130, 180, 0.7);
+  transform: scale(1.05) translateZ(10px);
+  transition-duration: 0.5s;
+  z-index: 10;
+}
+
+#ph4:hover {
+  box-shadow: 0 9px 32px rgba(130, 20, 20, 0.75), 0 0 22px rgba(200, 70, 70, 0.55);
+  transform: scale(1.05) translateZ(10px);
+  transition-duration: 0.5s;
+  z-index: 10;
+}
+
+#ph5:hover {
+  box-shadow: 0 8px 30px rgba(120, 80, 150, 0.7), 0 0 25px rgba(180, 150, 220, 0.5);
+  transform: scale(1.05) translateZ(10px);
+  transition-duration: 0.5s;
+  z-index: 10;
+}
+
+#ph6:hover {
+  box-shadow: 0 8px 30px rgba(60, 180, 180, 0.7), 0 0 25px rgba(100, 200, 150, 0.5);
+  transform: scale(1.05) translateZ(10px);
+  transition-duration: 0.5s;
+  z-index: 10;
+}
+
+#ph7:hover {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.85), 0 0 30px rgba(20, 20, 20, 0.7);
+  transform: scale(1.05) translateZ(10px);
+  transition-duration: 0.5s;
+  z-index: 10;
+}
+
+#dr1 {
+  position: absolute;
+  top: -46px;
+  pointer-events: none;
+  z-index: 13;
+}
+
+
+#dr1 {
+  position: absolute;
+  top: -46px;
+  pointer-events: none;
+  z-index: 13;
+  transition: transform 0.5s ease;
+}
+
+
+
+/* Новый блок с текстом и кнопкой */
+#text-and-button {
+  max-width: 600px; /* можно подкорректировать */
+  margin-left: 100px; /* подвинуть под начало заголовков */
+}
+
+.h1bot {
+  font-family: "Intel One Mono", monospace;
+  font-size: 70px;
+  color: #D0D8FF;
+  margin-bottom: 10px;
+  text-align: left; /* если нужно */
+}
+
+#vmestebottom {
+  font-family: "Intel One Mono", monospace;
+  margin-left: 0;
+}
+
+.h2bot {
+  font-family: "Intel One Mono", monospace;
+  font-size: 41px;
+  color: #818181;
+  margin-bottom: 40px;
+  text-align: left; /* если нужно */
+}
+
+#ZaprosDveri {
+  all: unset;
+  transition-property: background;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  font-family: "Intel One Mono", monospace;
+  width: 260px;
+  display: block;
+  background-color: transparent;
+  color: #CCCCCC;
+  border-radius: 15px;
+  border: 2px solid grey;
+  padding: 8px;
+  font-size: 18px;
+  text-align: center;
+  position: static; /* Убираем позиционирование */
+  left: auto;
+  margin-bottom: 100px;
+}
+
+#ZaprosDveri:hover {
+  background-size: cover;
+  background-color: rgb(60, 56, 56);
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  #logotip {
+    left: 0;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+
+  .btn {
+    float: none;
+    display: block;
+    margin: 10px auto;
+    left: 0;
+  }
+
+  .Zagolovok1 {
+    font-size: 40px;
+    margin-left: 0;
+  }
+
+  .Zagolovok2 {
+    font-size: 24px;
+    margin-left: 0;
+    margin-bottom: 60px;
+  }
+
+  #H1anH2up {
+    margin-left: 0;
+  }
+
+  #CenterPhots {
+    grid-template-columns: 1fr;
+    margin-bottom: 80px;
+  }
+
+  .h1bot {
+    font-size: 32px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .h2bot {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 41px;
+    color: #b93131;
+  }
+
+  #vmestebottom {
+    margin-left: 0;
+  }
+
+  #ZaprosDveri {
+    display: block;
+    width: 90%;
+    left: 0;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #text-and-button {
+    margin-left: 0;
+    max-width: 90%;
+  }
+}

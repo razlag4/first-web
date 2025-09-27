@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background: url("PhonPhotoProject/BlackWoodFon.png") center center / cover no-repeat fixed;
+  color: #D0D8FF;
+  scroll-behavior: smooth;
+}
+
+
+#UpSide {
+  width: 100%;
+  height: 110px;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: relative;
+  opacity: 0.9;
+  border-bottom: 2px solid rgb(122, 122, 122);
+  margin-bottom: 40px;
+}
+
+
+#logotip {
+  width: 138px;
+  height: auto;
+  position: relative;
+  left: 181px;
+  top: -13px;
+}
+
+
+#background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(
+    270deg,
+    #002c26,
+    #101010,
+    hsl(304, 100%, 3%),
+    #000319,
+    #070a00,
+    #140000,
+    rgb(16, 0, 16)
+  );
+  background-size: 1200% 1200%;
+  animation: gradientShift 20s ease infinite;
+  filter: blur(2px);
+}
+
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+#page-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+
+.btn {
+  transition-property: background-color;
+  transition-duration: 0.6s;
+  font-family: "Intel One Mono", monospace;
+  position: relative;
+  width: 140px;
+  bottom: -22px;
+  display: block;
+  float: right;
+  background-color: transparent;
+  color: #cccccc;
+  border-radius: 15px;
+  border: none;
+  padding: 8px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  left: -125px;
+  margin-right: 25px;
+  text-decoration: none;
+  z-index: 1;
+}
+
+
+.btn:hover {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.85), 0 0 30px rgba(20, 20, 20, 0.7);
+  transform: scale(1.05) translateZ(10px);
+  transition-duration: 0.6s;
+  z-index: 10;
+  transition: box-shadow 0.4s ease, transform 0.6s ease;
+  background-color: rgb(112, 111, 111);
+}
+
+
+#AboutMe {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+
+.p {
+  font-family: "Intel One Mono", monospace;
+  font-weight: 900;
+  font-size: 25px;
+  margin-bottom: 40px;
+  text-align: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+
+.p:hover {
+  box-shadow: 0px 0px 20px black;
+  transform: scale(1.05) translateZ(20px);
+  transition-duration: 0.5s;
+}
+
+
+.pbot {
+  font-family: "Intel One Mono", monospace;
+  font-weight: 900;
+  font-size: 25px;
+  margin-bottom: 60px;
+}
+
+
+.p {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 20px 30px;
+  margin: 30px auto 50px;
+  max-width: 700px;
+  border-radius: 12px;
+}
+
+
+#DLA {
+  all: unset;
+  font-size: 25px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(71, 71, 130);
+}
+
+#DLA:hover {
+  text-decoration-color: rgb(76, 76, 230);
+  color: rgb(82, 68, 236);
+}

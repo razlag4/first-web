@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="creator" content="Сергей Жданов" />
+  <meta name="description" content="Установка межкомнатных дверей" />
+  <title>Свяжитесь с нами</title>
+  <link rel="stylesheet" href="Css/Csstocontactus.css" />
+</head>
+
+<body>
+
+  <div id="background-gradient"></div>
+  <div id="page-wrapper">
+
+    <div id="UpSide">
+      <img id="logotip" src="logo.png" alt="MineLogo" width="9%" />
+      <a href="Aboutus.html" class="btn">About ME</a>
+      <a href="contactus.html" class="btn">Contact ME</a>
+      <a href="ownsite.html" class="btn">MY Projects</a>
+    </div>
+
+    <h1 id="h1Up">Пусть экран нас не разделяет - начнём разговор прямо здесь</h1>
+    <h2 id="h2Up">мы отвечаем каждому в течение 30 минут, проверь сам!</h2>
+
+    <form id="formid" onsubmit="return userdatasubmit()">
+      <div class="Divs">
+        <input oninput="checkForm()" id="useremail" class="Input" type="email" placeholder=" " />
+        <span class="InputText">Your Email</span>
+      </div>
+
+      <div class="Divs">
+        <input oninput="checkForm()" id="inputname" class="Input" type="text" placeholder=" " />
+        <span class="InputText">Your name</span>
+      </div>
+
+      <div class="Divs">
+        <input oninput="checkForm()" id="useradress" class="Input" type="text" placeholder=" " />
+        <span class="InputText">Your Address</span>
+      </div>
+
+      <div>
+        <select class="doors" id="doors" onchange="checkForm()">
+          <option disabled selected value="">выберите ваш тип двери</option>
+          <option value="doudoor.html">Double door</option>
+          <option value="insdoor.html">inswing door</option>
+          <option value="mfinsdoor.html">metal frame inswing door</option>
+          <option value="firedoor.html">Fire door</option>
+          <option value="mfdoudoor.html">metal frame double door</option>
+        </select>
+      </div>
+
+      <button disabled type="submit" id="confirm">запросить установку</button>
+    </form>
+
+    <h1 id="h1h2bot">
+      <pre>не любите заполнять формочки?
+<sup>свяжитесь с нами напрямую</sup>
+</pre>
+    </h1>
+
+    <a id="OurEmail" href="mailto:youremail@example.com">Our Email</a>
+
+  </div>
+
+  <script src="JavaScript/JStoContactus.js"></script>
+
+</body>
+</html>
